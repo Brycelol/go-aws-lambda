@@ -16,4 +16,6 @@ zip aws-helloworld-lamba.zip bootstrap                                          
   
 # Manually upload in the UI or use AWS CLI to publish
 
+# Invoke API
+https://7kj1vkkimc.execute-api.eu-central-1.amazonaws.com/lambda-go-hello
 ```
