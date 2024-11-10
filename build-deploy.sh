@@ -18,7 +18,7 @@ for file in cmd/functions/*/*; do
 
     zip_output="$func_build_dir/lambda.zip"
     echo "Zipping up Lambda Function to $zip_output..."
-    zip "$zip_output" "$func_build_dir/bootstrap"
+    zip -j "$zip_output" "$func_build_dir/bootstrap"
 done
 
 echo "Finished!"
