@@ -17,6 +17,9 @@
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
+# func build dir
+build/
+
 # Go workspace file
 go.work
 go.work.sum
@@ -26,3 +29,5 @@ go.work.sum
 
 # goland foo
 .idea/
+
+.DS_Store

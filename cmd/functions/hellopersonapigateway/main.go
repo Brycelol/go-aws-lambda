@@ -1,4 +1,4 @@
-package main
+package hellopersonapigateway
 
 import (
 	"encoding/json"
@@ -7,6 +7,9 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
+// Go Lambda for integration with API Gateway
+
+// Person Struct encapsulating first and last name
 type Person struct {
 	FirstName *string `json:"first_name"`
 	LastName  *string `json:"last_name"`
@@ -17,10 +20,10 @@ type ResponseBody struct {
 }
 
 func main() {
-	lambda.Start(handler)
+	lambda.Start(handleRequest)
 }
 
-func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+func handleRequest(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	var person Person
 
 	err := json.Unmarshal([]byte(request.Body), &person)
