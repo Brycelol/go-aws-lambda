@@ -1,4 +1,4 @@
-package helloperson
+package main
 
 import (
 	"encoding/json"

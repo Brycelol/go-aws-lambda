@@ -1,4 +1,4 @@
-package hellopersonapigateway
+package main
 
 import (
 	"encoding/json"
